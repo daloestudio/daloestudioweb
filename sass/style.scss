@@ -59,3 +59,21 @@ body {
     padding-bottom: 20px;
     
 }
+
+footer {
+    ul {
+        width: 100%;
+        li {
+           list-style-type: none;
+        }
+    }
+    .row {
+        text-align: center;
+        a{
+            margin-right: 10px;
+        }
+    }
+    .socialMedia {
+        float: right;
+    }
+}

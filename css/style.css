@@ -44,4 +44,20 @@ nav {
   padding-bottom: 20px;
 }
 
+footer ul {
+  width: 100%;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer .row {
+  text-align: center;
+}
+footer .row a {
+  margin-right: 10px;
+}
+footer .socialMedia {
+  float: right;
+}
+
 /*# sourceMappingURL=style.css.map */
