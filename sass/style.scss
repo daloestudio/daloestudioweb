@@ -1,0 +1,61 @@
+@import 'colors';
+@import 'extends';
+
+.logo {
+    width: 100%;
+}
+
+.nav-logo {
+    width: 10%;
+
+}
+
+
+.carousel-section {
+    padding: 0;
+} 
+
+nav {
+    background-color: $color_orange;
+}
+
+.navbar-nav {
+    .nav-item{
+        .nav-link {
+            color: $color_white!important;
+            &:hover {
+                color: $color_yellow;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+body {
+    @extend .main-brackground;
+}
+
+.home {
+    @extend .main-brackground;
+}
+
+.infotografia {
+    @extend .content-section;
+    background-color: $color_orange;
+    
+}
+
+.servicios {
+    @extend .content-section;
+    background-color: $color_white;
+    
+}
+
+.revelado {
+    @extend .content-section;
+    background-color: $color_red;
+    padding-bottom: 20px;
+    
+}

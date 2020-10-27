@@ -1,0 +1,47 @@
+.content-section, .revelado, .servicios, .infotografia {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-brackground, .home, body {
+  background-color: #EE9933;
+}
+
+.logo {
+  width: 100%;
+}
+
+.nav-logo {
+  width: 10%;
+}
+
+.carousel-section {
+  padding: 0;
+}
+
+nav {
+  background-color: #CC6622;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #EEDDBB !important;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #EE9933;
+  text-decoration: underline;
+}
+
+.infotografia {
+  background-color: #CC6622;
+}
+
+.servicios {
+  background-color: #EEDDBB;
+}
+
+.revelado {
+  background-color: #AA4433;
+  padding-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
