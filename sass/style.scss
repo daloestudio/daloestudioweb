@@ -10,14 +10,22 @@
 
 }
 
-
+h1{
+    font-weight: bold;
+}
 .carousel-section {
     padding: 0;
 } 
 
+.carousel-caption {
+    bottom: 50%!important;
+}
+
 nav {
     background-color: $color_orange;
 }
+
+
 
 .navbar-nav {
     .nav-item{
@@ -31,21 +39,28 @@ nav {
     }
 }
 
+.dropdown-menu {
+    background-color: $color_orange;
 
+}
+
+.dropdown-item {
+    color: $color_white!important;
+    &:hover {
+        background-color: $color_red;
+    }
+}
 
 body {
     @extend .main-brackground;
+    font-family: Merriweather;
 }
 
 .home {
     @extend .main-brackground;
 }
 
-.infotografia {
-    @extend .content-section;
-    background-color: $color_orange;
-    
-}
+
 
 .servicios {
     @extend .content-section;
@@ -53,11 +68,111 @@ body {
     
 }
 
-.revelado {
+.service-item {
+    text-align: center;
+    padding-top: 20px;
+    p {
+        padding-top: 20px;
+    }
+    img {
+        width: 70%;
+    }
+
+}
+
+.store-item{
+    background-color: $color_orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  
+    img{
+        width: 100%;
+    }
+    p {
+        margin-top:20px;
+        font-weight: bold;
+    }
+    button {
+        background-color: $color_white;
+    }
+}
+
+.tienda {
+    @extend .content-section;
+    background-color: $color_yellow;
+    
+}
+
+.store-items {
+    .row {
+        div {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav {
+        max-height: 200px;
+
+    }
+    .store-items {
+        .row {
+            flex-wrap: nowrap;
+        }
+    }
+
+    
+    .store-item {
+        margin: 20px
+    }
+
+}
+
+@media (max-width: 992px) {
+    
+    .store-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .spotlight {
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+}
+.portfolio {
+    @extend .content-section;
+    background-color: $color_orange;
+    
+}
+
+.portfolio-row {
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.infotografia {
     @extend .content-section;
     background-color: $color_red;
+    color: $color_white;
+    .container .row {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+.revelado {
+    @extend .content-section;
+    background-color: $color_dark;
+    color: $color_white;
     padding-bottom: 20px;
     
+}
+
+.mail-contact {
+    color: black;
 }
 
 footer {
@@ -69,6 +184,7 @@ footer {
     }
     .row {
         text-align: center;
+        padding-top: 20px;
         a{
             margin-right: 10px;
         }
@@ -76,4 +192,5 @@ footer {
     .socialMedia {
         float: right;
     }
+    background-color: $color_red;
 }

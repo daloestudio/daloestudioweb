@@ -1,6 +1,6 @@
-.content-section, .revelado, .servicios, .infotografia {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.content-section, .revelado, .infotografia, .portfolio, .tienda, .servicios {
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .main-brackground, .home, body {
@@ -15,8 +15,16 @@
   width: 10%;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 .carousel-section {
   padding: 0;
+}
+
+.carousel-caption {
+  bottom: 50% !important;
 }
 
 nav {
@@ -31,19 +39,116 @@ nav {
   text-decoration: underline;
 }
 
-.infotografia {
+.dropdown-menu {
   background-color: #CC6622;
+}
+
+.dropdown-item {
+  color: #EEDDBB !important;
+}
+.dropdown-item:hover {
+  background-color: #AA4433;
+}
+
+body {
+  font-family: Merriweather;
 }
 
 .servicios {
   background-color: #EEDDBB;
 }
 
-.revelado {
-  background-color: #AA4433;
+.service-item {
+  text-align: center;
+  padding-top: 20px;
+}
+.service-item p {
+  padding-top: 20px;
+}
+.service-item img {
+  width: 70%;
+}
+
+.store-item {
+  background-color: #CC6622;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.store-item img {
+  width: 100%;
+}
+.store-item p {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.store-item button {
+  background-color: #EEDDBB;
+}
+
+.tienda {
+  background-color: #EE9933;
+}
+
+.store-items .row div img {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    max-height: 200px;
+  }
+
+  .store-items .row {
+    flex-wrap: nowrap;
+  }
+
+  .store-item {
+    margin: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .store-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .spotlight {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.portfolio {
+  background-color: #CC6622;
+}
+
+.portfolio-row {
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
+.infotografia {
+  background-color: #AA4433;
+  color: #EEDDBB;
+}
+.infotografia .container .row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.revelado {
+  background-color: #442211;
+  color: #EEDDBB;
+  padding-bottom: 20px;
+}
+
+.mail-contact {
+  color: black;
+}
+
+footer {
+  background-color: #AA4433;
+}
 footer ul {
   width: 100%;
 }
@@ -52,6 +157,7 @@ footer ul li {
 }
 footer .row {
   text-align: center;
+  padding-top: 20px;
 }
 footer .row a {
   margin-right: 10px;

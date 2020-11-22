@@ -2,191 +2,351 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SITIO DEL ESTUDIO FOTOGRAFICO DALOESTUDIO, DEDICADO A LA VENTA DE ROLLOS DE DIVERSOS FORMATOS, REVELADO Y DIGITALIZACION DE LOS MISMOS Y DIVULGACION DE LA FOTOGRAFIA ANALOGICA">
-    <meta name="keywords" content="FOTOGRAFIA ANALOGICA REVELADO DIGITALIZACION ROLLO ESTUDIO FOTOGRAFICO DALOESTUDIO">
-    <title>DALO Estudio - La vida en fotogramas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SITIO DEL ESTUDIO FOTOGRAFICO DALOESTUDIO, DEDICADO A LA VENTA DE ROLLOS DE DIVERSOS FORMATOS, REVELADO Y DIGITALIZACION DE LOS MISMOS Y DIVULGACION DE LA FOTOGRAFIA ANALOGICA">
+  <meta name="keywords" content="FOTOGRAFIA ANALOGICA REVELADO DIGITALIZACION ROLLO ESTUDIO FOTOGRAFICO DALOESTUDIO">
+  <title>DALO Estudio - La vida en fotogramas</title>
+  <script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.6.3/dist/spotlight.bundle.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand nav-logo" href="#">  <img class="logo" src="images/lente-dalo-textura.png" alt="dalo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav w-100 d-flex justify-content-around">
-            <li class="nav-item active">
-              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#infotografia">Infotografia</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#servicios">Servicios</a>
-              </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tienda
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#rollosColor">ROLLOS COLOR</a>
-                <a class="dropdown-item" href="#rollosBN">ROLLOS BN</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#revelado">Revelado</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
-    <section id="home" class="container-fluid carousel-section home">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/AA022A.jpg" alt="andromeda" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>DALO ESTUDIO</h5>
-                  <p>La vida en fotogramas</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images/AA022A.jpg" alt="andromeda" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>DALO ESTUDIO</h5>
-                  <p>La vida en fotogramas</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images/AA022A.jpg" alt="andromeda" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>DALO ESTUDIO</h5>
-                  <p>La vida en fotogramas</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Siguiente</span>
-            </a>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand nav-logo" href="#"> <img class="logo" src="images/objetivo-dalo.png " alt="dalo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav w-100 d-flex justify-content-around">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Tienda
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#rollosColor">ROLLOS COLOR</a>
+            <a class="dropdown-item" href="#rollosBN">ROLLOS BN</a>
           </div>
-        
-    </section>
-    <section id="infotografia" class="container content-section infotografia">
-        <h1>
-            Infotografia
-        </h1>
-        <p>
-            Hola! Bienvenidxs a esta hermosa seccion llamada Infotografia, donde veremos informacion y trabajos de diversos fotografxs
-            
-
-        </p>
-    </section>
-    <section id="servicios" class="container  content-section servicios">
-        <h1>
-            SERVICIOS
-        </h1>
-        <p>
-            Proveemos servicios de Revelado, digitalizacion de rollos 35mm y formato 120. 
-
-
-        </p>
-    </section>
-    <section id="tienda" class="container">
-        <h1>
-            TIENDA
-        </h1>
-        <section class="row" id="rollosColor">
-            color
-        </section>
-
-        <section class="row" id="rollosBN">
-            blanco y negro
-        </section>
-    </section>
-    <section id="portfolio" class="container">
-        <h1>
-            PORTFOLIO
-        </h1>
-    </section>
-    <section id="revelado" class="container content-section revelado">
-        <h1>
-            REVELADO
-        </h1>
-        <form method="POST">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-                <label for="lastName">Apellido</label>
-                <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp">
-              </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">Nunca usaremos tu mail salvo para contactarte!</small>
-              </div>
-              <div class="form-group">
-                <label for="exposure">Seleccione tipo de revelado</label>
-                <select class="form-control" id="exposure">
-                    <option value="">Seleccione tipo de revelado</option>
-                    <option value="c41">Revelado c41</option>
-                    <option value="ecn2">Revelado cine</option>
-                </select>
-              </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="newsletter">
-              <label class="form-check-label" for="newsletter">Desea recibir el newsletter?</label>
-            </div>
-            <div class="form-group">
-                <label for="comments">Comentarios</label>
-                <textarea class="form-control" id="comments" rows="3"></textarea>
-              </div>
-            <button type="reset" class="btn btn-secondary">Limpiar</button>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
-    </section>
-
-    <footer class = "container">
-      <div class="row">
-        <ul>
-          <li>
-            <a href="mailto:daloestudio@gmail.com">daloestudio@gmail.com</a></li>
-          <li>DALO estudio</li>
-
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#infotografia">Infotografía</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#revelado">Revelado</a>
+        </li>
       </ul>
+    </div>
+  </nav>
+  <section id="home" class="container-fluid carousel-section home">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/gallery/AA036A.jpg" alt="andromeda" class="d-block w-100 ">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>DALO ESTUDIO</h5>
+            <p>La vida en fotogramas</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/gallery/ciudad.jpg" alt="andromeda" class="d-block w-100 ">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>DALO ESTUDIO</h5>
+            <p>La vida en fotogramas</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/gallery/AA003.jpg" alt="andromeda" class="d-block w-100 ">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>DALO ESTUDIO</h5>
+            <p>La vida en fotogramas</p>
+          </div>
+        </div>
       </div>
-        <div class="row socialMedia">
-          <a href="https://www.facebook.com/dalostudio"><img src="images/facebook-4-256.png" alt="facebook"
-            width="30"></a>
-    <a href="https://www.instagram.com/dalostudio"><img src="images/instagram_f_icon-icons.com_62685.png"
-            alt="instagram" width="30"></a>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
 
+  </section>
+
+  <section id="servicios" class="container-fluid  content-section servicios">
+    <div class="container">
+      <h1>
+        SERVICIOS
+      </h1>
+      <div class="row">
+        <div class="col-xl-4 col-xs-12 service-item">
+          <img src="images/chemicals.png" alt="chemicals">
+          <p>
+            Revelamos tus rollos con químicos de alta calidad, preservando al máximo la calidad de los negativos
+          </p>
+        </div>
+        <div class="col-xl-4 col-xs-12 service-item">
+          <img src="images/scanner.png" alt="scanner">
+          <p>
+            Digitalizamos tus negativos con scanner de última generación a 1200 dpi para que puedas disfrutar de tus
+            fotos cuando quieras y donde quieras
+          </p>
+        </div>
+        <div class="col-xl-4 col-xs-12 service-item">
+          <img src="images/film.png" alt="film">
+          <p>
+            Trabajamos formato 35 mm, formato 120, formato 110, tanto color (Proceso C-41 y ECN-2) como Blanco y Negro
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="tienda" class="container-fluid content-section tienda">
+    <div class="container">
+      <h1>
+        TIENDA
+      </h1>
+      <h3 id="rollosColor">ROLLOS COLOR</h3>
+      <div class="row">
+        <div class="container store-items">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3 store-item">
+
+              <img src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS">
+              <p>KODAK COLOR PLUS</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-ektar.jpg" alt="KODAK EKTAR">
+              <p>KODAK EKTAR</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-gold.jpg" alt="KODAK GOLD">
+              <p>KODAK GOLD</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-portra-400.jpg" alt="KODAK PORTRA 400">
+              <p>KODAK PORTRA 400</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/fuji-eterna-500t.jpg" alt="FUJI ETERNA 500T">
+              <p>FUJI ETERNA 500T</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-e100.jpg" alt="KODAK E100">
+              <p>KODAK E100</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-proimage.jpg" alt="PRO IMAGE">
+              <p>KODAK PRO IMAGE</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/color/kodak-ultramax.jpg" alt="KODAK ULTRAMAX">
+              <p>KODAK ULTRAMAX</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 id="rollosBN">ROLLOS BLANCO Y NEGRO</h3>
+      <div class="row">
+        <div class="container store-items">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3 store-item">
+              <img src="images/store/bn/ilford-pan.jpg" alt="ILFORD PAN 400">
+              <p>ILFORD PAN 400</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/bn/kodak-bn-tmax.jpg" alt="KODAK TMAX">
+              <p>KODAK TMAX</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/bn/lomography-postdam.jpg" alt="LOMOGRAPHY POSTDAM">
+              <p>LOMOGRAPHY POSTDAM</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
+              <img src="images/store/bn/lomography.jpg" alt="LOMOGRAPHY">
+              <p>LOMOGRAPHY</p>
+              <button type="button" onclick="alert('Agregado al carrito');">Comprar</button>
+            </div>
+          </div>
         </div>
 
-    </footer>
+  </section>
+  </div>
+  </section>
+  <section id="portfolio" class="container-fluid content-section portfolio">
+    <div class="container">
+      <h1>
+        PORTFOLIO
+      </h1>
+      <div class="portfolio-row row">
+        <a class="spotlight  col-xl-4" href="images/gallery/AA003.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA003.jpg" style="width:100%">
+        </a>
+        <a class="spotlight  col-xl-4" href="images/gallery/AA010.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA010.jpg" style="width:100%">
+        </a>
+        <a class="spotlight  col-xl-4" href="images/gallery/AA013.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA013.jpg" style="width:100%">
+        </a>
+      </div>
+      <div class="portfolio-row row">
+        <a class="spotlight  col-xl-4" href="images/gallery/AA023.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA023.jpg" style="width:100%">
+        </a>
+        <a class="spotlight  col-xl-4" href="images/gallery/AA024.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA024.jpg" style="width:100%">
+        </a>
+        <a class="spotlight  col-xl-4" href="images/gallery/AA036A.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/AA036A.jpg" style="width:100%">
+        </a>
+      </div>
+      <div class="portfolio-row row">
+        <a class="spotlight  col-xl-4" href="images/gallery/ciudad.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/ciudad.jpg" style="width:100%">
+        </a>
+        <a class="spotlight  col-xl-4" href="images/gallery/espejito.jpg" data-animation="slide,fade,scale">
+          <img src="images/gallery/espejito.jpg" style="width:100%">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="infotografia" class="container-fluid content-section infotografia">
+    <div class="container">
+      <h1>
+        Infotografía
+      </h1>
+      <div class="row no-gutters">
+        <h3>Hannah Höch</h3>
+        <p class="info">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
+          Hannah Höch (1 de noviembre de 1889- 31 de mayo de 1978) fue una artista plástica y fotógrafa alemana, pionera
+          del movimiento dadá.
+          <br>Utilizó, como modo de expresión, el fotomontaje​, siendo considerada pionera en esta técnica fotográfica.
+          <br>Fue la mayor de cinco hermanos. Abandonó los estudios a los quince años, para encargarse del cuidado de su
+          hermana. Sin embargo, en 1912, comenzó estudios de artes gráficas y de dibujo sobre cristal, en la Escuela de
+          Artes y Oficios de Berlín, teniendo como maestro a Harold Bergen.
+          <br>Al comenzar la Primera Guerra Mundial, ofreció sus servicios en la Cruz roja, aunque pronto comenzó a
+          estudiar con Emil Orlik.
+          <br>En 1915, conoció a Raoul Hausmann, con quien tuvo una aventura extramatrimonial, con resultados
+          «artísticamente productivos, pero con una relación turbulenta.
+          <br>También conoció a Kurt Schwitters, quien le sugirió que se cambiase el nombre de Johanne, por Hannah; y a
+          Johannes Baader, quien la llamó la dadásofa, al ser la compañera del dadásofo, apodo de Raoul Hausmann. A
+          partir de ese momento, la artista se implicó activamente en el movimiento dadá.
+        </p>
+        <img src="images/HannahHoch.jpg" class=" w-100" />
+      </div>
+
+      <div class="row no-gutters">
+        <h3>Helen Levitt</h3>
+        <p class="info">
+          Helen Levitt (31 de agosto de 1913 - 29 de marzo de 2009)​ fue una fotógrafa estadounidense.
+          <br>Considerada una de las grandes fotógrafas del siglo XX, su obra más conocida es en blanco y negro y en el
+          género documental. Pero también hizo, en las últimas décadas de su vida, fotografía en diapositivas en color.
+          <br>Nacida en Nueva York, retrata las calles y los habitantes de la ciudad, sobre todo de los niños.
+          <br>Alumna de Walker Evans y de Cartier-Bresson. Tuvo su contacto con el cine y el documental a finales de los
+          años 1940 influenciada por Luis Buñuel, exiliado en ese momento en EE. UU.
+          <br>Su obra se centra básicamente en la ciudad de Nueva York, aunque tuvo una salida a México, que quedó
+          reflejada en un libro: Helen Levitt: Mexico City </p>
+        <img src="images/HelenLevitt.jpeg"  class = " w-100"/>
+      </div>
+
+
+    </div>
+  </section>
+  <section id="revelado" class="container-fluid content-section revelado">
+    <div class="container">
+
+      <h1>
+        REVELADO
+      </h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Apellido</label>
+          <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="email">Mail</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">Nunca usaremos tu mail salvo para contactarte!</small>
+        </div>
+        <div class="form-group">
+          <label for="exposure">Seleccione tipo de revelado</label>
+          <select class="form-control" id="exposure">
+            <option value="">Seleccione tipo de revelado</option>
+            <option value="c41">Revelado c41</option>
+            <option value="ecn2">Revelado cine</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="newsletter">
+          <label class="form-check-label" for="newsletter">Desea recibir el newsletter?</label>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comentarios</label>
+          <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container-fluid">
+    <div class="row footer-contact">
+      <ul>
+        <li>
+          <a href="mailto:daloestudio@gmail.com" class="mail-contact"> daloestudio@gmail.com</a></li>
+        <li>DALO estudio</li>
+        <li class="socialMedia">
+          <a href="https://www.facebook.com/dalostudio"><img src="images/facebook-4-256.png" alt="facebook"
+              width="30"></a>
+          <a href="https://www.instagram.com/dalostudio"><img src="images/instagram_f_icon-icons.com_62685.png"
+              alt="instagram" width="30"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
 
 </html>
