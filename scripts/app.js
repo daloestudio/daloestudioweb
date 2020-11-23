@@ -1,10 +1,15 @@
-let number1 = Number(prompt("Ingrese un Numero"));
+let dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
-if(number1 > 0)
-{
-    alert("El numero es positivo!");
-    if(number1 >= 10 && number1 <= 50)
+for(let i=0; i<7; i++) {
+
+   alert(dias[i]); 
+
+    if( i % 2 == 0)
     {
-        console.log("El numero esta entre 10 y 50. El numero es: " + number1);
+        alert('Este dia es PAR');
+    }
+    
+    if (i==6){
+        alert('TERMINO LA SEMANA!!!');
     }
 }
