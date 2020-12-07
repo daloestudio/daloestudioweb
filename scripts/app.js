@@ -1,15 +1,30 @@
-let dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-
-for(let i=0; i<7; i++) {
-
-   alert(dias[i]); 
-
-    if( i % 2 == 0)
-    {
-        alert('Este dia es PAR');
+let carrito  = 
+{
+    productos : [],
+    promos: [],
+    envio : {
+        codigoOpcionEnvio : "",
+        direccion : "",
+        codigoPostal : "",
+        nombreReceptor : "",
+        identificacionReceptor : ""
     }
-    
-    if (i==6){
-        alert('TERMINO LA SEMANA!!!');
+}
+
+
+function agregarProducto(carrito, producto) {
+    carrito.productos.push(producto);
+    calcularPromos(carrito);
+}
+
+function calcularPromos(carrito) {
+    if(carrito.productos.filter(prod=> prod.tipo == "ROLLO").length > 4)
+    {
+        let promo = {
+            descripcion : "PROMO 20% OFF CON 4 O MAS ROLLOS",
+            descuento : 20,
+            tipo: "PORCENTAJE"
+        }
+        carrito.promos.push(promo);
     }
 }
