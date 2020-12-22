@@ -11,6 +11,15 @@ let carrito  =
     }
 }
 
+function comprarProducto(ev){
+    var sib = $(ev).siblings("p");
+    let productInfo = "";
+    for(let i=0;i<sib.length;i++){
+       productInfo +=  sib[i].innerText + "\r\n";
+    }
+
+    alert("Producto comprado: " + productInfo);
+}
 
 function agregarProducto(carrito, producto) {
     carrito.productos.push(producto);
@@ -27,10 +36,4 @@ function calcularPromos(carrito) {
         }
         carrito.promos.push(promo);
     }
-}
-
-let prodsAEliminar = parseInt(prompt("Ingrese cantidad de productos a eliminar"));
-let products = document.getElementsByClassName("store-item");
-for(let i=0;i<prodsAEliminar && products.length > 0; i++) {
-    products[0].parentNode.removeChild(products[0]);
 }
