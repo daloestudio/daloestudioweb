@@ -14,6 +14,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -51,6 +52,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#revelado">Revelado</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link cart-link" href="carrito.html"><i class="bi bi-cart4 cart"></i><span class="cart-counter cart">0</span></a>
+        </li>
+        
       </ul>
     </div>
   </nav>
@@ -135,25 +140,25 @@
           <div class="row">
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3 store-item">
 
-              <img src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS">
+              <img src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS" class ="item-img">
               <p class ="item-description">KODAK COLOR PLUS</p>
               <p class ="item-price">$200</p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-ektar.jpg" alt="KODAK EKTAR">
+              <img src="images/store/color/kodak-ektar.jpg" alt="KODAK EKTAR"  class ="item-img">
               <p class ="item-description">KODAK EKTAR</p>
               <p class ="item-price">$800</p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-gold.jpg" alt="KODAK GOLD">
+              <img src="images/store/color/kodak-gold.jpg" alt="KODAK GOLD"  class ="item-img">
               <p class ="item-description">KODAK GOLD</p>
               <p class ="item-price">$1000</p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-portra-400.jpg" alt="KODAK PORTRA 400">
+              <img src="images/store/color/kodak-portra-400.jpg" alt="KODAK PORTRA 400"  class ="item-img">
               <p class ="item-description">KODAK PORTRA 400</p>
               <p class ="item-price">$1100</p>
 
@@ -162,28 +167,28 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/fuji-eterna-500t.jpg" alt="FUJI ETERNA 500T">
+              <img src="images/store/color/fuji-eterna-500t.jpg" alt="FUJI ETERNA 500T"  class ="item-img">
               <p class ="item-description">FUJI ETERNA 500T</p>
               <p class ="item-price">$900</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-e100.jpg" alt="KODAK E100">
+              <img src="images/store/color/kodak-e100.jpg" alt="KODAK E100"  class ="item-img">
               <p class ="item-description">KODAK E100</p>
               <p class ="item-price">$450</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-proimage.jpg" alt="PRO IMAGE">
+              <img src="images/store/color/kodak-proimage.jpg" alt="PRO IMAGE"  class ="item-img">
               <p class ="item-description">KODAK PRO IMAGE</p>
               <p class ="item-price">$400</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-ultramax.jpg" alt="KODAK ULTRAMAX">
+              <img src="images/store/color/kodak-ultramax.jpg" alt="KODAK ULTRAMAX"  class ="item-img">
               <p class ="item-description">KODAK ULTRAMAX</p>
               <p class ="item-price">$200</p>
 
@@ -197,28 +202,28 @@
         <div class="container store-items">
           <div class="row">
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3 store-item">
-              <img src="images/store/bn/ilford-pan.jpg" alt="ILFORD PAN 400">
+              <img src="images/store/bn/ilford-pan.jpg" alt="ILFORD PAN 400"  class ="item-img">
               <p class ="item-description">ILFORD PAN 400</p>
               <p class ="item-price">$300</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/bn/kodak-bn-tmax.jpg" alt="KODAK TMAX">
+              <img src="images/store/bn/kodak-bn-tmax.jpg" alt="KODAK TMAX"  class ="item-img">
               <p class ="item-description">KODAK TMAX</p>
               <p class ="item-price">$700</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/bn/lomography-postdam.jpg" alt="LOMOGRAPHY POSTDAM">
+              <img src="images/store/bn/lomography-postdam.jpg" alt="LOMOGRAPHY POSTDAM"  class ="item-img">
               <p class ="item-description">LOMOGRAPHY POSTDAM</p>
               <p class ="item-price">$600</p>
 
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/bn/lomography.jpg" alt="LOMOGRAPHY">
+              <img src="images/store/bn/lomography.jpg" alt="LOMOGRAPHY"  class ="item-img">
               <p class ="item-description">LOMOGRAPHY</p>
               <p class ="item-price">$800</p>
 
@@ -370,6 +375,7 @@
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
  <script src="scripts/app.js"></script>
+ <script src="scripts/carrito.js"></script>
 </body>
 
 </html>
