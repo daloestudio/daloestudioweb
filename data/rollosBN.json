@@ -1,0 +1,32 @@
+{
+    "productos" : [
+        {
+            "codigo": "IP4",
+            "tipo" : "ROLLO",
+            "imagen" : "images/store/color/kodak-color-plus.jpg",
+            "descripcion" : "ILFORD PAN 400",
+            "precio" : "$300"
+        },
+        {
+            "codigo": "KTM",
+            "tipo" : "ROLLO",
+            "imagen" : "images/store/bn/kodak-bn-tmax.jpg",
+            "descripcion" : "KODAK TMAX",
+            "precio" : "$700"
+        },
+        {
+            "codigo": "LPO",
+            "tipo" : "ROLLO",
+            "imagen" : "images/store/bn/lomography-postdam.jpg",
+            "descripcion" : "LOMOGRAPHY POSTDAM",
+            "precio" : "$600"
+        },
+        {
+            "codigo": "LOM",
+            "tipo" : "ROLLO",
+            "imagen" : "images/store/bn/lomography.jpg",
+            "descripcion" : "LOMOGRAPHY",
+            "precio" : "$800"
+        }
+    ]
+}

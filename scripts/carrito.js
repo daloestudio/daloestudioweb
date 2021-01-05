@@ -56,6 +56,9 @@ function comprarProducto(ev){
             case "item-code":
                 producto.codigo = sib[i].innerText;
                 break;
+            case "item-type":
+                producto.tipo = sib[i].innerText;
+                break;
             case "item-price": {
                 producto.precio = sib[i].innerText;
                 break;
@@ -139,6 +142,7 @@ function mostrarCarrito(){
         clone.className = clone.className.replace("d-none","product-row-active");
 
         clone.getElementsByClassName("product-code")[0].innerText = producto.codigo;
+        clone.getElementsByClassName("product-type")[0].innerText = producto.tipo;
         clone.getElementsByClassName("product-img")[0].src = producto.imagen;
         clone.getElementsByClassName("product-description")[0].innerText = producto.descripcion;
         clone.getElementsByClassName("product-price")[0].innerText = producto.precio;
@@ -163,38 +167,61 @@ function insertAfter(e,i){
 
 function cargarProductos(){
     $.ajax({
-        url: "data/datos.json", //un archivo json con datos de usuarios: nombre, apellido, etc
+        url: "https://raw.githubusercontent.com/daloestudio/daloestudioweb/master/data/rollosColor.json", //un archivo json con datos de usuarios: nombre, apellido, etc
         dataType: "json",
         success: function(response) {
-          let template =  document.getElementsByClassName("store-item-row d-none")[0];
-          let clone = null;
+          let template =  document.getElementsByClassName("store-item-row d-none color-film")[0];
+          insertarProductosTienda(template, response.productos)
+        }
+    });
 
-          let j = 0;
-          for(let i = 0 ; i<response.productos.length; i++){
-
-            if(i % 4 == 0)
-            {
-                clone = template.cloneNode(true);
-                clone.className = clone.className.replace("d-none","");
-            }
-            
-              //falta buscar la forma de acomodar en el sitema de grillas
-            let producto = response.productos[i];
-            var itemColumns =clone.getElementsByClassName("store-item");
-            var column = itemColumns[ i % 4 ];
-
-
-
-            column.getElementsByClassName("item-code")[0].innerText = producto.codigo;
-            column.getElementsByClassName("item-img")[0].src = producto.imagen;
-            column.getElementsByClassName("item-img")[0].alt = producto.descripcion;
-            column.getElementsByClassName("item-description")[0].innerText = producto.descripcion;
-            column.getElementsByClassName("item-price")[0].innerText = producto.precio;
-            insertAfter(clone.firstElementChild, column);
-    
-          }
-
+    $.ajax({
+        url: "https://raw.githubusercontent.com/daloestudio/daloestudioweb/master/data/rollosBN.json", //un archivo json con datos de usuarios: nombre, apellido, etc
+        dataType: "json",
+        success: function(response) {
+          let template =  document.getElementsByClassName("store-item-row d-none bw-film")[0];
+          insertarProductosTienda(template, response.productos)
         }
     });
       
+}
+
+function insertarProductosTienda(template, productos){
+    let clone = null;
+
+    let j = 0;
+    for(let i = 0 ; i<productos.length; i++){
+
+    if(i % 4 == 0)
+    {
+        if(clone != null)
+        {
+            insertAfter(template.parentNode.firstElementChild, clone);
+            
+        }
+        clone = template.cloneNode(true);
+        clone.className = clone.className.replace("d-none","");
+    }
+    
+        //falta buscar la forma de acomodar en el sitema de grillas
+    let producto = productos[i];
+    var itemColumns =clone.getElementsByClassName("store-item");
+    var column = itemColumns[ i % 4 ];
+
+
+
+    column.getElementsByClassName("item-code")[0].innerText = producto.codigo;
+    column.getElementsByClassName("item-type")[0].innerText = producto.tipo;
+    column.getElementsByClassName("item-img")[0].src = producto.imagen;
+    column.getElementsByClassName("item-img")[0].alt = producto.descripcion;
+    column.getElementsByClassName("item-description")[0].innerText = producto.descripcion;
+    column.getElementsByClassName("item-price")[0].innerText = producto.precio;
+    insertAfter(clone.firstElementChild, column);
+
+    }
+
+    if(clone != null)
+    {
+        insertAfter(template.parentNode.firstElementChild, clone);
+    }
 }
