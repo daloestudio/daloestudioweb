@@ -39,7 +39,8 @@ function modificarCantidad(ev, cantidad){
 
     if(productoExistente.cantidad ==0)
     {
-        parent.remove();
+        parent.fadeOut("slow"); 
+       // parent.remove();
     }
 }
 
