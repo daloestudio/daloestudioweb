@@ -137,72 +137,37 @@
       <h3 id="rollosColor">ROLLOS COLOR</h3>
       <div class="row">
         <div class="container store-items">
-          <div class="row">
+          <div class="row d-none store-item-row">
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3 store-item">
-
-              <img src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS" class ="item-img">
-              <p class ="item-code d-none">KCP</p>
-              <p class ="item-description">KODAK COLOR PLUS</p>
-              <p class ="item-price">$200</p>
+              <img src="" alt="" class ="item-img">
+              <p class ="item-code d-none"></p>
+              <p class ="item-description"></p>
+              <p class ="item-price"></p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-ektar.jpg" alt="KODAK EKTAR"  class ="item-img">
-              <p class ="item-code d-none">KEK</p>
-              <p class ="item-description">KODAK EKTAR</p>
-              <p class ="item-price">$800</p>
+              <img src="" alt="" class ="item-img">
+              <p class ="item-code d-none"></p>
+              <p class ="item-description"></p>
+              <p class ="item-price"></p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-gold.jpg" alt="KODAK GOLD"  class ="item-img">
-              <p class ="item-code d-none">KGO</p>
-              <p class ="item-description">KODAK GOLD</p>
-              <p class ="item-price">$1000</p>
+              <img src="" alt="" class ="item-img">
+              <p class ="item-code d-none"></p>
+              <p class ="item-description"></p>
+              <p class ="item-price"></p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
             <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-portra-400.jpg" alt="KODAK PORTRA 400"  class ="item-img">
-              <p class ="item-code d-none">KP4</p>
-              <p class ="item-description">KODAK PORTRA 400</p>
-              <p class ="item-price">$1100</p>
-
+              <img src="" alt="" class ="item-img">
+              <p class ="item-code d-none"></p>
+              <p class ="item-description"></p>
+              <p class ="item-price"></p>
               <button type="button" onclick="comprarProducto(this);">Comprar</button>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/fuji-eterna-500t.jpg" alt="FUJI ETERNA 500T"  class ="item-img">
-              <p class ="item-code d-none">FE5</p>
-              <p class ="item-description">FUJI ETERNA 500T</p>
-              <p class ="item-price">$900</p>
-
-              <button type="button" onclick="comprarProducto(this);">Comprar</button>
-            </div>
-            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-e100.jpg" alt="KODAK E100"  class ="item-img">
-              <p class ="item-code d-none">KE1</p>
-              <p class ="item-description">KODAK E100</p>
-              <p class ="item-price">$450</p>
-
-              <button type="button" onclick="comprarProducto(this);">Comprar</button>
-            </div>
-            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-proimage.jpg" alt="PRO IMAGE"  class ="item-img">
-              <p class ="item-code d-none">KPI</p>
-              <p class ="item-description">KODAK PRO IMAGE</p>
-              <p class ="item-price">$400</p>
-
-              <button type="button" onclick="comprarProducto(this);">Comprar</button>
-            </div>
-            <div class="col-xs-12 col-md-6 col-l-6 col-xl-3  store-item">
-              <img src="images/store/color/kodak-ultramax.jpg" alt="KODAK ULTRAMAX"  class ="item-img">
-              <p class ="item-code d-none">KUM</p>
-              <p class ="item-description">KODAK ULTRAMAX</p>
-              <p class ="item-price">$200</p>
-
-              <button type="button" onclick="comprarProducto(this);">Comprar</button>
-            </div>
-          </div>
+         
         </div>
       </div>
       <h3 id="rollosBN">ROLLOS BLANCO Y NEGRO</h3>
@@ -388,6 +353,13 @@
   <script src="js/bootstrap.bundle.js"></script>
  <script src="scripts/app.js"></script>
  <script src="scripts/carrito.js"></script>
+ 
+<script>
+  // self executing function here
+  (function() {
+    cargarProductos();  
+  })();
+  </script>
 </body>
 
 </html>

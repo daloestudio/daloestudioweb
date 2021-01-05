@@ -102,8 +102,19 @@ function modificarProducto(producto, cantidad) {
         });
         counterElement[0].innerText = counter;
     }
+
+    actualizarTotal(carrito);s
 }
 
+function actualizarTotal(carrito){
+    let total = 0;
+    for(let i=0;i<carrito.productos.length; i++){
+         let producto = carrito.productos[i];
+         total += (producto.cantidad *  parseFloat(producto.precio.replace("$","")));
+    }
+    
+    document.getElementsByClassName("cart-footer-total")[0].innerText = total;
+}
 
 function calcularPromos(carrito) {
     if(carrito.productos.filter(prod=> prod.tipo == "ROLLO").length > 4)
@@ -148,4 +159,42 @@ function insertAfter(e,i){
     } else { 
         e.parentNode.appendChild(i); 
     }
+}
+
+function cargarProductos(){
+    $.ajax({
+        url: "data/datos.json", //un archivo json con datos de usuarios: nombre, apellido, etc
+        dataType: "json",
+        success: function(response) {
+          let template =  document.getElementsByClassName("store-item-row d-none")[0];
+          let clone = null;
+
+          let j = 0;
+          for(let i = 0 ; i<response.productos.length; i++){
+
+            if(i % 4 == 0)
+            {
+                clone = template.cloneNode(true);
+                clone.className = clone.className.replace("d-none","");
+            }
+            
+              //falta buscar la forma de acomodar en el sitema de grillas
+            let producto = response.productos[i];
+            var itemColumns =clone.getElementsByClassName("store-item");
+            var column = itemColumns[ i % 4 ];
+
+
+
+            column.getElementsByClassName("item-code")[0].innerText = producto.codigo;
+            column.getElementsByClassName("item-img")[0].src = producto.imagen;
+            column.getElementsByClassName("item-img")[0].alt = producto.descripcion;
+            column.getElementsByClassName("item-description")[0].innerText = producto.descripcion;
+            column.getElementsByClassName("item-price")[0].innerText = producto.precio;
+            insertAfter(clone.firstElementChild, column);
+    
+          }
+
+        }
+    });
+      
 }

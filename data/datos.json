@@ -1,0 +1,52 @@
+{
+    "productos" : [
+        {
+            "codigo": "KCP",
+            "imagen" : "images/store/color/kodak-color-plus.jpg",
+            "descripcion" : "KODAK COLOR PLUS",
+            "precio" : "$200"
+        },
+        {
+            "codigo": "KEK",
+            "imagen" : "images/store/color/kodak-ektar.jpg",
+            "descripcion" : "KODAK EKTAR",
+            "precio" : "$800"
+        },
+        {
+            "codigo": "KGO",
+            "imagen" : "images/store/color/kodak-gold.jpg",
+            "descripcion" : "KODAK GOLD",
+            "precio" : "$1000"
+        },
+        {
+            "codigo": "KP4",
+            "imagen" : "images/store/color/kodak-portra-400.jpg",
+            "descripcion" : "KODAK PORTRA 400",
+            "precio" : "$1100"
+        },
+        {
+            "codigo": "FE5",
+            "imagen" : "images/store/color/fuji-eterna-500t.jpg",
+            "descripcion" : "FUJI ETERNA 500T",
+            "precio" : "$900"
+        },
+        {
+            "codigo": "KE1",
+            "imagen" : "images/store/color/kodak-e100.jpg",
+            "descripcion" : "KODAK E100",
+            "precio" : "$450"
+        },
+        {
+            "codigo": "KPI",
+            "imagen" : "images/store/color/kodak-proimage.jpg",
+            "descripcion" : "KODAK PRO IMAGE",
+            "precio" : "$400"
+        },
+        {
+            "codigo": "KUM",
+            "imagen" : "images/store/color/kodak-ultramax.jpg",
+            "descripcion" : "KODAK ULTRAMAX",
+            "precio" : "$200"
+        }
+    ]
+}
