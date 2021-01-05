@@ -3,7 +3,7 @@
         {
             "codigo": "IP4",
             "tipo" : "ROLLO",
-            "imagen" : "images/store/color/kodak-color-plus.jpg",
+            "imagen" : "images/store/bn/ilford-pan.jpg",
             "descripcion" : "ILFORD PAN 400",
             "precio" : "$300"
         },
