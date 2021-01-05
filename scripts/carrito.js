@@ -16,6 +16,7 @@ else
 {
    carrito = 
     {
+        total : 0,
         productos : [],
         promos: [],
         envio : {
@@ -34,6 +35,8 @@ function modificarCantidad(ev, cantidad){
     let productoExistente = carrito.productos.find(x=> x.codigo === codigoProducto);
     modificarProducto(productoExistente, cantidad);
     parent.find(".product-quantity").text(productoExistente.cantidad) ;
+    parent.find(".product-total").text(productoExistente.cantidad  * parseFloat(productoExistente.precio.replace("$","")));
+
     if(productoExistente.cantidad ==0)
     {
         parent.remove();
@@ -106,7 +109,7 @@ function modificarProducto(producto, cantidad) {
         counterElement[0].innerText = counter;
     }
 
-    actualizarTotal(carrito);s
+    actualizarTotal(carrito);
 }
 
 function actualizarTotal(carrito){
@@ -116,25 +119,72 @@ function actualizarTotal(carrito){
          total += (producto.cantidad *  parseFloat(producto.precio.replace("$","")));
     }
     
+    document.getElementsByClassName("cart-footer-subtotal-total")[0].innerText = total;
+    if(carrito.promos.length > 0) {
+        $(".cart-footer-promo").removeClass("d-none");
+
+        let sumaPromo=0;
+        for(let i=0;i<carrito.promos.length; i++){
+            let promo = carrito.promos[i];
+            let valorPromo = 0;
+            if(promo.tipo == "PORCENTAJE") {
+                valorPromo = total * promo.descuento / 100;
+            }
+            else if (promo.tipo == "MONTO") {
+                valorPromo =  promo.descuento;
+            }
+
+            total = total - valorPromo;
+            sumaPromo += valorPromo;
+        }
+
+        document.getElementsByClassName("cart-footer-promo-total")[0].innerText = sumaPromo;
+        
+    }
+    else {
+        $(".cart-footer-promo").addClass("d-none");
+
+    }
+
+    
+
     document.getElementsByClassName("cart-footer-total")[0].innerText = total;
+    carrito.total = total;
 }
 
 function calcularPromos(carrito) {
-    if(carrito.productos.filter(prod=> prod.tipo == "ROLLO").length > 4)
+
+    let cantidad = 0;
+    carrito.productos.filter(prod=> prod.tipo == "ROLLO").forEach(function(elem){
+        cantidad += elem.cantidad;
+    });
+
+    if(cantidad > 4)
     {
-        let promo = {
-            descripcion : "PROMO 20% OFF CON 4 O MAS ROLLOS",
-            descuento : 20,
-            tipo: "PORCENTAJE"
+        let promo = carrito.promos.find(promo=> promo.codigo  == "20OFFROLLO");
+        if(!promo)
+        {
+            let promo = {
+                descripcion : "PROMO 20% OFF CON 4 O MAS ROLLOS",
+                descuento : 20,
+                codigo : "20OFFROLLO",
+                tipo: "PORCENTAJE"
+            }
+            carrito.promos.push(promo);
         }
-        carrito.promos.push(promo);
     }
+    else 
+    {
+        let promo = carrito.promos.find(promo=> promo.codigo  == "20OFFROLLO");
+        carrito.promos.splice(promo, 1);
+    }
+
+    
 }
 
 function mostrarCarrito(){
   let template =  document.getElementsByClassName("product-row d-none")[0];
 
-    let total = 0;
    for(let i=0;i<carrito.productos.length; i++){
         let clone = template.cloneNode(true);
         let producto = carrito.productos[i];
@@ -150,10 +200,11 @@ function mostrarCarrito(){
         clone.getElementsByClassName("product-total")[0].innerText = producto.cantidad  * parseFloat(producto.precio.replace("$",""));
         insertAfter(template.parentNode.firstElementChild, clone);
 
-        total += (producto.cantidad *  parseFloat(producto.precio.replace("$","")));
    }
 
-   document.getElementsByClassName("cart-footer-total")[0].innerText = total;
+   calcularPromos(carrito);
+   actualizarTotal(carrito);
+
   
 }
 
