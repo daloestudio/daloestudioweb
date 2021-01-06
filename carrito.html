@@ -19,88 +19,108 @@
 
 <body>
   <section id="carrito" class="container-fluid content-section carrito">
-    <div class="container">
-      <h1>
-        Carrito
-      </h1>
-      <div class="cart-content">
-        <div class="cart-header row">
-          <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
-            <p class="cart-header-product">PRODUCTO</p>
-          </div>
-
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <P class="cart-header-total">TOTAL</P>
-          </div>
+    <div class="container-fluid">
+     
+      <div class="row">
+        <div class="col-xs-3 col-md-3 col-l-3 col-xl-3 d-flex">
+          <button type="button" onclick="volverATienda();" class="cart-button"> <i class="bi bi-arrow-left"></i>  Volver a Tienda</button>
+          
         </div>
-       <!--  <div class="row product-row">
-          <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-            <div class="row">
-              <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-                <img class="product-img" src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS">
+        <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+          <h1>
+            Carrito
+          </h1>
+          <div class="cart-content">
+            <div class="cart-header row">
+              <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
+                <p class="cart-header-product">PRODUCTO</p>
               </div>
+    
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <P class="cart-header-total">TOTAL</P>
+              </div>
+            </div>
+           <!--  <div class="row product-row">
               <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-                <p class="product-description">KODAK COLOR PLUS</p>
-                <p class="product-price">Precio: <span>$200</span> - Cantidad: <span>2</span></p>
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                    <img class="product-img" src="images/store/color/kodak-color-plus.jpg" alt="KODAK COLOR PLUS">
+                  </div>
+                  <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                    <p class="product-description">KODAK COLOR PLUS</p>
+                    <p class="product-price">Precio: <span>$200</span> - Cantidad: <span>2</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+              </div>
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <p class="product-total">$400</p>
+              </div>
+            </div> -->
+            <div class="row product-row d-none">
+              <p class="product-code d-none"></p>
+              <p class="product-type d-none"></p>
+              <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                    <img class="product-img" src="" alt="">
+                  </div>
+                  <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                    <p class="product-description"></p>
+                    <p class="product-price-label">Precio: <span class="product-price"></span> - Cantidad: <span class="product-quantity"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+              </div>
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
+                    <p class="product-total"></p>
+                  </div>
+                  <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                    <button type="button" class="cart-modifier" onclick="modificarCantidad(this,1);">+</button>
+                  </div>
+                  <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                    <button type="button" class="cart-modifier"  onclick="modificarCantidad(this, -1);">-</button>
+                  </div>
+              </div>
+              </div>
+            </div>
+            <div class="cart-footer-subtotal row">
+              <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
+                <p class="cart-footer-subtotal-label">SUBTOTAL</p>
+              </div>
+    
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <P class="cart-footer-subtotal-total"></P>
+              </div>
+            </div>
+            <div class="cart-footer-promo row d-none">
+              <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
+                <p class="cart-footer-promo-label">SUMA PROMOCIONES</p>
+              </div>
+    
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <P class="cart-footer-promo-total"></P>
+              </div>
+            </div>
+            <div class="cart-footer row">
+              <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
+                <p class="cart-footer-total-label">TOTAL</p>
+              </div>
+    
+              <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
+                <P class="cart-footer-total"></P>
               </div>
             </div>
           </div>
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-          </div>
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <p class="product-total">$400</p>
-          </div>
-        </div> -->
-        <div class="row product-row d-none">
-          <p class="product-code d-none"></p>
-          <p class="product-type d-none"></p>
-          <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-            <div class="row">
-              <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-                <img class="product-img" src="" alt="">
-              </div>
-              <div class="col-xs-6 col-md-6 col-l-6 col-xl-6">
-                <p class="product-description"></p>
-                <p class="product-price-label">Precio: <span class="product-price"></span> - Cantidad: <span class="product-quantity"></span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-          </div>
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <p class="product-total"></p>
-            <button type="button" onclick="modificarCantidad(this,1);">+</button>
-            <button type="button" onclick="modificarCantidad(this, -1);">-</button>
-          </div>
         </div>
-        <div class="cart-footer-subtotal row">
-          <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
-            <p class="cart-footer-subtotal-label">SUBTOTAL</p>
-          </div>
-
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <P class="cart-footer-subtotal-total"></P>
-          </div>
-        </div>
-        <div class="cart-footer-promo row d-none">
-          <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
-            <p class="cart-footer-promo-label">SUMA PROMOCIONES</p>
-          </div>
-
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <P class="cart-footer-promo-total"></P>
-          </div>
-        </div>
-        <div class="cart-footer row">
-          <div class="col-xs-9 col-md-9 col-l-9 col-xl-9">
-            <p class="cart-footer-total-label">TOTAL</p>
-          </div>
-
-          <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
-            <P class="cart-footer-total"></P>
-          </div>
+        <div class="col-xs-3 col-md-3 col-l-3 col-xl-3">
         </div>
       </div>
+      
     </div>
   </section>
 
@@ -123,6 +143,10 @@
   </footer>
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/carrito.js"></script>
   <script>

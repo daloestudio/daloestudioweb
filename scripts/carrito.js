@@ -7,8 +7,10 @@ if(carrito_string)
         let counterElement = document.getElementsByClassName("cart-counter");
         if(counterElement && counterElement.length > 0)
         {
-            let counter =  parseInt(counterElement[0].innerText);
-            counter= carrito.productos.length;
+            let counter =  0;
+            carrito.productos.forEach(function(value){
+                    counter += (value.cantidad)
+            });
             counterElement[0].innerText = counter;
         }
    }
@@ -34,13 +36,18 @@ function modificarCantidad(ev, cantidad){
     let codigoProducto = parent.children(".product-code").text();
     let productoExistente = carrito.productos.find(x=> x.codigo === codigoProducto);
     modificarProducto(productoExistente, cantidad);
+    actualizarTotal(carrito);
     parent.find(".product-quantity").text(productoExistente.cantidad) ;
     parent.find(".product-total").text(productoExistente.cantidad  * parseFloat(productoExistente.precio.replace("$","")));
 
     if(productoExistente.cantidad ==0)
     {
         parent.fadeOut("slow"); 
-       // parent.remove();
+    }
+    else 
+    {
+        $(ev).effect( "highlight", {color: '#EEDDBB'}, 3000 );
+
     }
 }
 
@@ -76,6 +83,8 @@ function comprarProducto(ev){
 
     modificarProducto(producto, 1);
 
+    $(ev).effect( "highlight", {color: '#AA4433'}, 3000 );
+
 }
 
 function modificarProducto(producto, cantidad) {    
@@ -110,7 +119,6 @@ function modificarProducto(producto, cantidad) {
         counterElement[0].innerText = counter;
     }
 
-    actualizarTotal(carrito);
 }
 
 function actualizarTotal(carrito){
@@ -276,4 +284,9 @@ function insertarProductosTienda(template, productos){
     {
         insertAfter(template.parentNode.firstElementChild, clone);
     }
+}
+
+function volverATienda(){
+    window.history.go(-1); 
+    return false;
 }
